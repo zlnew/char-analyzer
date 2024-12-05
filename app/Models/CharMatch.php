@@ -6,23 +6,23 @@ namespace App\Models;
 
 class CharMatch extends CharAnalysis
 {
-    public function compare()
+    public function analyze()
     {
-        $charOne = strtolower($this->char_one);
-        $charTwo = strtolower($this->char_two);
+        $inputOne = strtolower($this->input_one);
+        $inputTwo = strtolower($this->input_two);
 
-        $uniqueCharsOne = array_unique(str_split($charOne));
-        $uniqueCharTwo = implode('', array_unique(str_split($charTwo)));
+        $inputOneChars = array_unique(str_split($inputOne));
+        $inputTwo = implode('', array_unique(str_split($inputTwo)));
 
-        $totalCharsOne = strlen($charOne);
+        $totalInputOneChars = strlen($inputOne);
 
         $matches = 0;
-        foreach ($uniqueCharsOne as $char) {
-            if (strpos($uniqueCharTwo, $char) !== false) {
+        foreach ($inputOneChars as $char) {
+            if (strpos($inputTwo, $char) !== false) {
                 $matches++;
             }
         }
 
-        $this->percentage = $this->calculateCharMatch($matches, $totalCharsOne);
+        $this->percentage = $this->calculateCharMatch($matches, $totalInputOneChars);
     }
 }

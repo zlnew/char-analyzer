@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Http\Controllers\CharMatchController;
+use App\Http\Controllers\AnalyzeCharMatchController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -11,5 +11,5 @@ Route::middleware(['auth:sanctum'])->group(function () {
         return $request->user();
     });
 
-    Route::post('char-match', CharMatchController::class)->name('char-match');
+    Route::post('char-match/analyze', AnalyzeCharMatchController::class)->name('char-match.analyze');
 });

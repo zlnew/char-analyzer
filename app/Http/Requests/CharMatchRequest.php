@@ -14,8 +14,8 @@ class CharMatchRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'char_one' => ['required', 'string', 'min:5'],
-            'char_two' => ['required', 'string', 'min:5'],
+            'input_one' => ['required', 'string', 'min:5'],
+            'input_two' => ['required', 'string', 'min:5'],
         ];
     }
 }

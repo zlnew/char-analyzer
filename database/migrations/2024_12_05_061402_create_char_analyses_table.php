@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('char_analyses', function (Blueprint $table) {
             $table->id();
-            $table->string('char_one');
-            $table->string('char_two');
+            $table->string('input_one');
+            $table->string('input_two');
             $table->float('percentage');
             $table->timestamps();
         });

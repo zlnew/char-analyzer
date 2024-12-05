@@ -7,12 +7,12 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CharMatchRequest;
 use App\Models\CharMatch;
 
-class CharMatchController extends Controller
+class AnalyzeCharMatchController extends Controller
 {
     public function __invoke(CharMatchRequest $request)
     {
         $charMatch = new CharMatch($request->all());
-        $charMatch->compare();
+        $charMatch->analyze();
         $charMatch->save();
 
         return response()->json($charMatch);
