@@ -1,5 +1,5 @@
 {
-  "name": "word-analyzer",
+  "name": "char-analyzer",
   "private": true,
   "type": "module",
   "scripts": {
