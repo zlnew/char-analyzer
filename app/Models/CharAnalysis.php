@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -20,7 +22,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static Builder<static>|CharAnalysis whereCreatedAt($value)
  * @method static Builder<static>|CharAnalysis whereUpdatedAt($value)
  *
- * @mixin \Eloquent
+ * @mixin Eloquent
  *
  * @property int $id
  * @property string $input_one
