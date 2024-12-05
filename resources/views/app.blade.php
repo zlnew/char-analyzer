@@ -11,7 +11,7 @@
   @vite('src/main.ts')
 </head>
 
-<body class="antialiased">
+<body class="antialiased bg-slate-100">
   <noscript>
     <strong>
       We're sorry but this app doesn't work properly without JavaScript enabled. Please enable it to continue.
