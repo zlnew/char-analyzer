@@ -8,8 +8,8 @@ type User = {
 }
 
 type CharAnalysis = {
-  char_one: string
-  char_two: string
+  input_one: string
+  input_two: string
   percentage: number
 }
 
@@ -26,6 +26,6 @@ type RegistrationForm = {
 }
 
 type CharMatchRequest = {
-  char_one: string
-  char_two: string
+  input_one: string
+  input_two: string
 }

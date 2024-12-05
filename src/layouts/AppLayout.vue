@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Auth from '@/api/Auth'
+import RedButton from '@/components/RedButton.vue'
 import useAuthStore from '@/stores/auth'
 import { useRouter } from 'vue-router'
 
@@ -21,12 +22,23 @@ const logout = async () => {
 
 <template>
   <div>
-    <nav>
-      <button type="button" @click="logout">Logout</button>
+    <nav class="bg-white py-4">
+      <div class="container mx-auto grid grid-cols-2 justify-between items-center">
+        <div class="font-bold text-2xl">Char Analyzer</div>
+        <div class="justify-self-end">
+          <RedButton type="button" label="Logout" @click="logout" />
+        </div>
+      </div>
     </nav>
 
-    <main>
+    <main class="mt-8 container mx-auto">
       <RouterView />
     </main>
+
+    <footer class="mt-8 container mx-auto">
+      <a href="https://github.com/zlnew/char-analyzer" target="_blank" class="text-slate-600"
+        >@aprizqymaulana</a
+      >
+    </footer>
   </div>
 </template>

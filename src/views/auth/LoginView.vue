@@ -35,15 +35,22 @@ const authenticate = async () => {
     <div class="text-lg font-bold">Login</div>
 
     <form class="mt-4 flex flex-col gap-4" @submit.prevent="authenticate">
-      <FormInput v-model="credential.email" type="email" label="Email" autocomplete="username" />
+      <FormInput
+        v-model="credential.email"
+        type="email"
+        label="Email"
+        autocomplete="username"
+        required
+      />
       <FormInput
         v-model="credential.password"
         type="password"
         label="Password"
         autocomplete="current-password"
+        required
       />
 
-      <PrimaryButton type="submit" label="Login" />
+      <PrimaryButton type="submit" label="Login" block />
     </form>
 
     <div class="mt-2 text-center">

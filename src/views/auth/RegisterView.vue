@@ -37,22 +37,24 @@ const register = async () => {
     <div class="text-lg font-bold">Register</div>
 
     <form class="mt-4 flex flex-col gap-4" @submit.prevent="register">
-      <FormInput v-model="form.name" type="text" label="Name" autocomplete="name" />
-      <FormInput v-model="form.email" type="email" label="Email" autocomplete="email" />
+      <FormInput v-model="form.name" type="text" label="Name" autocomplete="name" required />
+      <FormInput v-model="form.email" type="email" label="Email" autocomplete="email" required />
       <FormInput
         v-model="form.password"
         type="password"
         label="Password"
         autocomplete="new-password"
+        required
       />
       <FormInput
         v-model="form.password_confirmation"
         type="password"
         label="Confirm your password"
         autocomplete="new-password"
+        required
       />
 
-      <PrimaryButton type="submit" label="Register" />
+      <PrimaryButton type="submit" label="Register" block />
     </form>
 
     <div class="mt-2 text-center">

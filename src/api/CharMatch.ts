@@ -3,9 +3,9 @@ import Api from './Api'
 import { AxiosError } from 'axios'
 
 class CharMatch extends Api {
-  public async compare<T>(request: CharMatchRequest) {
+  public async analyze<T>(request: CharMatchRequest) {
     try {
-      const response = await api.post('api/char-match', request)
+      const response = await api.post('api/char-match/analyze', request)
 
       return <T>response.data
     } catch (error) {
