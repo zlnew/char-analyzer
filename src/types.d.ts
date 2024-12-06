@@ -8,6 +8,7 @@ type User = {
 }
 
 type CharAnalysis = {
+  id: number
   input_one: string
   input_two: string
   percentage: number
