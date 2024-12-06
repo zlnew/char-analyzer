@@ -17,6 +17,9 @@ const router = createRouter({
           path: '',
           name: 'home',
           component: () => import('@/views/HomeView.vue'),
+          meta: {
+            title: 'Home',
+          },
         },
       ],
     },
@@ -31,11 +34,17 @@ const router = createRouter({
           path: 'login',
           name: 'auth.login',
           component: () => import('@/views/auth/LoginView.vue'),
+          meta: {
+            title: 'Login',
+          },
         },
         {
           path: 'register',
           name: 'auth.register',
           component: () => import('@/views/auth/RegisterView.vue'),
+          meta: {
+            title: 'Register',
+          },
         },
       ],
     },
@@ -44,6 +53,8 @@ const router = createRouter({
 
 router.beforeEach(async (to, _from, next) => {
   const authStore = useAuthStore()
+
+  document.title = `${to.meta.title} | ${import.meta.env.VITE_APP_NAME}`
 
   if (to.meta.requiresAuth && !authStore.isAuthenticated) {
     return next({ name: 'auth.login' })

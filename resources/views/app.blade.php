@@ -6,7 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="app-version" content="{{ config('app.version') }}">
-  <link type="image/x-icon" href="/favicon.svg" rel="icon">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   @vite('src/main.ts')
 </head>
