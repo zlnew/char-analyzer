@@ -66,6 +66,18 @@ const authenticate = async () => {
         :disabled="loading"
         block
       />
+
+      <div
+        class="p-4 rounded border border-blue-500 bg-blue-200 flex items-start justify-between gap-4"
+      >
+        <div class="space-y-2">
+          <div class="font-bold">Testing Login</div>
+          <div class="text-slate-700">
+            <div>Email: <strong>test@example.com</strong></div>
+            <div>Password: <strong>password</strong></div>
+          </div>
+        </div>
+      </div>
     </form>
 
     <div class="mt-2 text-center">
